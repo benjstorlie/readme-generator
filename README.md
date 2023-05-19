@@ -37,3 +37,18 @@ THEN I am taken to the corresponding section of the README
 ```
 
 ## Video
+
+## Credits
+
+1. I got the regular expression for validating a GitHub username from a GitHub repository made by GitHub user [shinnn](https://github.com/shinnn).  It had instructions for installing it from npm, but I only needed the regular expression.
+
+  - [npmjs.com/package/github-username-regex](https://www.npmjs.com/package/github-username-regex)
+  - [github.com/shinnn/github-username-regex](https://github.com/shinnn/github-username-regex)
+
+2. I got all the license badges and links from a page made by GitHub user [lukas-h](https://gist.github.com/lukas-h).
+
+  - [Markdown License Badges for your Project](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
+
+3. I used a Lorem Ipsum generator to have more interesting-looking text for my example video.
+
+  - [loremipsum.io/generator](https://loremipsum.io/generator/)
