@@ -2,6 +2,12 @@
 
 ## Description
 
+This is a command-line application that generates a new README.md file, given a series of prompts to the user.
+
+## Installation
+
+The readme generator requires nodejs and inquirer to support the command line prompts.
+
 ## User Story
 
 ```md

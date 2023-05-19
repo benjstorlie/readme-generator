@@ -1,38 +1,57 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs')
+const generateMarkdown = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
   {
     type: 'input',
     message: 'Enter repo title.',
-    name: 'title'
+    name: 'title',
+    filter(val) {
+      return val.trim()
+    }
   },
   {
     type: 'input',
     message: 'Enter description.',
-    name: 'description'
+    name: 'description',
+    filter(val) {
+      return val.trim()
+    }
   },
   {
     type: 'input',
     message: 'Enter installation instructions.',
-    name: 'installation'
+    name: 'installation',
+    filter(val) {
+      return val.trim()
+    }
   },
   {
     type: 'input',
     message: 'Enter usage informatiom.',
-    name: 'usage'
+    name: 'usage',
+    filter(val) {
+      return val.trim()
+    }
   },
   {
     type: 'input',
     message: 'Enter contribution guidelines.',
-    name: 'contributing'
+    name: 'contributing',
+    filter(val) {
+      return val.trim()
+    }
   },
   {
     type: 'input',
     message: 'Enter test instructions.',
-    name: 'tests'
+    name: 'tests',
+    filter(val) {
+      return val.trim()
+    }
   },
   {
     type:'list',
@@ -43,12 +62,25 @@ const questions = [
   {
     type: 'input',
     message: 'What is your Github username?',
-    name: 'username'
+    name: 'username',
+    filter(val) {
+      return val.trim()
+    }
   },
   {
     type: 'input',
     message: 'What email address do you want to include in the readme?',
-    name: 'email'
+    name: 'email',
+    filter(val) {
+      return val.trim()
+    },
+    validate(val) {
+      const emailPattern = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/;
+      if (emailPattern.test(val)) {
+        return true
+      }
+      return "Please enter a valid email address."
+    }
   }
 ];
 
@@ -56,7 +88,13 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+
+  inquirer.prompt(questions).then((answers) => {
+    console.log(JSON.stringify(answers, null, '  '));
+  });
+
+}
 
 // Function call to initialize app
 init();
