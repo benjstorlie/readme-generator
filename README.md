@@ -38,6 +38,8 @@ THEN I am taken to the corresponding section of the README
 
 ## Video
 
+[Click here to view a video demonstrating the app's functionality](https://drive.google.com/file/d/1S0RvEkDaqWb8qDYPg6RTk7h50-4SOJRt/view)
+
 ## Credits
 
 1. I got the regular expression for validating a GitHub username from a GitHub repository made by GitHub user [shinnn](https://github.com/shinnn).  It had instructions for installing it from npm, but I only needed the regular expression.
